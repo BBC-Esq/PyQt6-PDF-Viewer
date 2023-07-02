@@ -10,13 +10,12 @@ PyQt6
 
 ## Instructions:
 
-1. NOTE: You can replace the [ENTER_PATH_HERE] within the script so it will automatically load a PDF.  This is useful for testing purposes when you want to modify the script and repeatedly test it without having to go to "file," "open," and select a PDF each time.
-2. Otherwise, simply go to the "File" menu and select the PDF to load.
+Run the script like you would any other Python script.  Then click the "File" menu and choose a PDF to view.  You can also replace the [ENTER_PATH_HERE] in the script so it will automatically load a PDF.  This is useful for testing purposes.  For example, when you're modifying the script and need re-run it numerous times to make sure it's still working.
 
 ## Summary of Scripts:
 
 | Script                   | Description                                                               |
 |--------------------------|---------------------------------------------------------------------------|
-| "draft_pdf_viewer.py"    | PDF viewer.                                                               |
+| draft_pdf_viewer.py      | PDF viewer.                                                               |
 
 Thank you for visiting!
