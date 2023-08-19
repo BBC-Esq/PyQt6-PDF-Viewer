@@ -4,7 +4,8 @@ Simple PDF viewer made with PyQt6.  Scoured the Internet and for days and finall
 
 ## Requirements:
 
-PyQt6
+- PyQt6
+- PyQt6-WebEngine
 
 **Note: Tested on Python 3.10**
 
