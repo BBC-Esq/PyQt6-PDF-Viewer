@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 ### Step 4 - Run Program
 ```
-python pyqt_pdf_viewer.py
+python pyqt6_pdf_viewer.py
 ```
 
 Thank you for visiting!
