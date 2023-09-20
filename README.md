@@ -1,22 +1,34 @@
 ## Summary:
 
-Simple PDF viewer made with PyQt6.  Scoured the Internet and for days and finally found a way to do it so I'm posting it here
+Simple PDF viewer made with PyQt6.  Scoured the Internet and for days and finally found a way to do it so I'm posting it here!
 
-## Requirements:
+# Installation
 
-- PyQt6
-- PyQt6-WebEngine
+> First, make sure you're running [Python 3.10+](https://www.python.org/downloads/release/python-31011/)
 
-**Note: Tested on Python 3.10**
+### Step 1 - Virtual Environment
+* Download the latest releast and unzip the folder to somewhere on your computer.  Then, open the folder containing my repository files, create a command prompt, and create a virtual environment:
+```
+python -m venv .
+```
+* Then "activate" the virtual environment:
+```
+.\Scripts\activate
+```
 
-## Instructions:
+### Step 2 - Upgrade pip
+```
+python -m pip install --upgrade pip
+```
 
-Run the script like you would any other Python script.  Then click the "File" menu and choose a PDF to view.  You can also replace the [ENTER_PATH_HERE] in the script so it will automatically load a PDF.  This is useful for testing purposes.  For example, when you're modifying the script and need re-run it numerous times to make sure it's still working.
+### Step 3 - Install Dependencies
+```
+pip install -r requirements.txt
+```
 
-## Summary of Scripts:
-
-| Script                   | Description                                                               |
-|--------------------------|---------------------------------------------------------------------------|
-| draft_pdf_viewer.py      | PDF viewer.                                                               |
+### Step 4 - Run Program
+```
+python pyqt_pdf_viewer.py
+```
 
 Thank you for visiting!
