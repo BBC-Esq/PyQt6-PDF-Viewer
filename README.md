@@ -1,4 +1,5 @@
-### Simple PDF viewer made with PyQt6.  Scoured the Internet and for days and finally found a way to do it so I'm posting it here!  Check out my other repository if you want to use Pyside6 instead.
+# PyQt6 PDF Viewer
+Simple PDF viewer made with PyQt6.  Scoured the Internet and for days and finally found a way to do it so I'm posting it here!  Check out my other repository if you want to use Pyside6 instead.
 
 # Installation
 
