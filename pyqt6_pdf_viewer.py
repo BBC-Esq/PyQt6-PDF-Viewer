@@ -63,6 +63,7 @@ class MainWindow(QMainWindow):
 if __name__ == '__main__':
     import sys
     app = QApplication(sys.argv)
+    app.setStyle("Fusion")
     win = MainWindow()
     win.show()
     sys.exit(app.exec())
