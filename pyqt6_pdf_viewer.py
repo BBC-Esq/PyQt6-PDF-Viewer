@@ -4,16 +4,6 @@ from PyQt6.QtGui import QAction
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 from PyQt6.QtWebEngineCore import QWebEnginePage
 
-class SearchLineEdit(QLineEdit):
-    def __init__(self, parent):
-        super().__init__(parent)
-        self.parent = parent
-
-    def keyPressEvent(self, event):
-        super().keyPressEvent(event)
-        if event.key() == Qt.Key.Key_Return:
-            self.parent.search_text(self.text())
-
 class MainWindow(QMainWindow):
     def __init__(self):
         super(QMainWindow, self).__init__()
@@ -30,11 +20,11 @@ class MainWindow(QMainWindow):
         self.webView = QWebEngineView()
         self.webView.settings().setAttribute(self.webView.settings().WebAttribute.PluginsEnabled, True)
         self.webView.settings().setAttribute(self.webView.settings().WebAttribute.PdfViewerEnabled, True)
-        
         self.layout.addWidget(self.webView)
 
-        self.search_input = SearchLineEdit(self)
+        self.search_input = QLineEdit(self)
         self.search_input.setPlaceholderText("Enter text to search...")
+        self.search_input.returnPressed.connect(lambda: self.search_text(self.search_input.text()))
         self.layout.addWidget(self.search_input)
 
         self.create_file_menu()
@@ -51,7 +41,7 @@ class MainWindow(QMainWindow):
         file_dialog = QFileDialog()
         filename, _ = file_dialog.getOpenFileName(self, "Open PDF", "", "PDF Files (*.pdf)")
         if filename:
-            self.webView.setUrl(QUrl("file:///" + filename.replace('\\', '/')))
+            self.webView.setUrl(QUrl.fromLocalFile(filename))
 
     def search_text(self, text):
         flag = QWebEnginePage.FindFlag.FindCaseSensitively
